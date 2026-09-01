@@ -1,17 +1,1607 @@
-<!DOCTYPE HTML>
-<html>
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Cetak Rute Strava</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        h1 { color: #fc4c02; } /* Warna khas Strava */
-        .btn { background-color: #fc4c02; color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 20px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RunPrint — Cetak Rute Lari Strava</title>
+  <meta
+    name="description"
+    content="Ubah rute lari Strava favoritmu menjadi karya fisik yang bisa dipajang."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Abadikan Momen Lari Terbaikmu</h1>
-    <p>Ubah rute Strava favoritmu menjadi lukisan poster fisik elegan.</p>
-    <a href="https://wa.me/628123456789" class="btn">Pesan via WhatsApp</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">↗</span>
+      RunPrint
+    </a>
+
+    <nav>
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#produk">Produk</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#mulai" class="nav-button">
+      Mulai Cetak
+    </a>
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          <span></span>
+          Buat lari jadi kenangan
+        </div>
+
+        <h1>
+          Rute lari kamu.
+          <em>Jadi karya.</em>
+        </h1>
+
+        <p>
+          Hubungkan Strava, pilih aktivitas lari favoritmu,
+          lalu kami ubah menjadi artwork yang siap dicetak
+          dan dipajang.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#mulai" class="primary-button">
+            Cetak Rute Saya
+            <span>→</span>
+          </a>
+
+          <a href="#cara-kerja" class="text-button">
+            Lihat cara kerja
+          </a>
+        </div>
+
+        <div class="trust">
+          <div class="avatars">
+            <span>R</span>
+            <span>A</span>
+            <span>D</span>
+            <span>+</span>
+          </div>
+
+          <div>
+            <strong>1.000+ pelari</strong>
+            <small>sudah mencetak perjalanan mereka</small>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- ROUTE PREVIEW -->
+      <div class="hero-preview">
+
+        <div class="poster">
+
+          <div class="poster-top">
+            <span>RUNPRINT</span>
+            <span>08.08.2026</span>
+          </div>
+
+          <div class="route-map">
+
+            <svg viewBox="0 0 500 430" preserveAspectRatio="none">
+
+              <path
+                class="route-shadow"
+                d="M80 350
+                   C110 290 80 230 140 190
+                   C200 150 160 100 230 115
+                   C300 130 300 190 350 165
+                   C405 138 430 180 390 230
+                   C350 280 405 300 350 340
+                   C295 385 250 310 200 330
+                   C150 350 130 390 80 350"
+              />
+
+              <path
+                class="route-line"
+                d="M80 350
+                   C110 290 80 230 140 190
+                   C200 150 160 100 230 115
+                   C300 130 300 190 350 165
+                   C405 138 430 180 390 230
+                   C350 280 405 300 350 340
+                   C295 385 250 310 200 330
+                   C150 350 130 390 80 350"
+              />
+
+              <circle cx="80" cy="350" r="8" class="start-point" />
+              <circle cx="80" cy="350" r="3" class="start-inner" />
+
+              <circle cx="350" cy="340" r="8" class="finish-point" />
+              <circle cx="350" cy="340" r="3" class="finish-inner" />
+
+            </svg>
+
+          </div>
+
+          <div class="poster-info">
+
+            <div>
+              <span>Distance</span>
+              <strong>10.42 KM</strong>
+            </div>
+
+            <div>
+              <span>Time</span>
+              <strong>52:18</strong>
+            </div>
+
+            <div>
+              <span>Elevation</span>
+              <strong>126 M</strong>
+            </div>
+
+          </div>
+
+          <div class="poster-footer">
+            <strong>JAKARTA</strong>
+            <span>ONE RUN. ONE STORY.</span>
+          </div>
+
+        </div>
+
+        <div class="floating-card">
+          <span class="check">✓</span>
+          <div>
+            <strong>Rute berhasil dipilih</strong>
+            <small>10.42 km · 52:18</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+
+      <div>
+        <span class="benefit-number">01</span>
+        <h3>Connect Strava</h3>
+        <p>
+          Tidak perlu upload screenshot.
+          Ambil data lari langsung dari Strava.
+        </p>
+      </div>
+
+      <div>
+        <span class="benefit-number">02</span>
+        <h3>Pilih & Preview</h3>
+        <p>
+          Pilih aktivitas, tentukan desain,
+          lalu lihat hasilnya sebelum bayar.
+        </p>
+      </div>
+
+      <div>
+        <span class="benefit-number">03</span>
+        <h3>Bayar QRIS</h3>
+        <p>
+          Bayar cepat menggunakan QRIS
+          tanpa proses checkout yang rumit.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="cara-kerja">
+
+      <div class="section-heading">
+        <span>SEMUDAH ITU</span>
+        <h2>Dari lari sampai jadi karya.</h2>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-icon">01</div>
+          <h3>Hubungkan Strava</h3>
+          <p>
+            Login menggunakan akun Strava
+            dan izinkan kami membaca aktivitas lari.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">02</div>
+          <h3>Pilih aktivitas</h3>
+          <p>
+            Pilih lari yang paling berkesan
+            dari daftar aktivitas kamu.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">03</div>
+          <h3>Bayar & selesai</h3>
+          <p>
+            Preview artwork, isi alamat,
+            lalu bayar menggunakan QRIS.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCT -->
+    <section class="product-section" id="produk">
+
+      <div class="product-copy">
+
+        <span class="eyebrow">THE CLASSIC</span>
+
+        <h2>
+          Satu rute.
+          <br />
+          Satu cerita.
+        </h2>
+
+        <p>
+          Poster minimalis yang menampilkan rute,
+          jarak, waktu, elevation, dan tanggal
+          lari kamu.
+        </p>
+
+        <div class="price">
+          <span>Mulai dari</span>
+          <strong>Rp149.000</strong>
+        </div>
+
+        <a href="#mulai" class="primary-button">
+          Buat Poster Saya →
+        </a>
+
+      </div>
+
+      <div class="product-visual">
+
+        <div class="mini-poster">
+
+          <span class="mini-label">RUNPRINT</span>
+
+          <svg viewBox="0 0 350 300">
+
+            <path
+              class="mini-route"
+              d="M55 240
+                 C90 205 50 150 105 120
+                 C160 90 145 50 195 70
+                 C245 90 225 130 270 115
+                 C315 100 320 140 285 175
+                 C250 210 300 230 255 255
+                 C210 280 175 230 135 250
+                 C100 268 80 260 55 240"
+            />
+
+          </svg>
+
+          <div class="mini-distance">
+            <strong>10.42</strong>
+            <span>KM</span>
+          </div>
+
+          <div class="mini-footer">
+            <span>JAKARTA</span>
+            <span>08.08.2026</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA / ORDER -->
+    <section class="order-section" id="mulai">
+
+      <div class="order-card">
+
+        <div class="order-header">
+
+          <span class="eyebrow">START HERE</span>
+
+          <h2>
+            Siap mengabadikan
+            lari kamu?
+          </h2>
+
+          <p>
+            Hanya butuh beberapa langkah.
+            Tidak perlu upload file atau screenshot.
+          </p>
+
+        </div>
+
+        <div class="order-flow">
+
+          <div class="order-step active">
+            <span>1</span>
+            <div>
+              <strong>Hubungkan Strava</strong>
+              <small>Ambil data lari kamu</small>
+            </div>
+          </div>
+
+          <div class="order-step">
+            <span>2</span>
+            <div>
+              <strong>Pilih aktivitas</strong>
+              <small>Pilih rute favorit</small>
+            </div>
+          </div>
+
+          <div class="order-step">
+            <span>3</span>
+            <div>
+              <strong>Bayar QRIS</strong>
+              <small>Checkout dengan cepat</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Backend nanti mengarah ke endpoint Strava OAuth -->
+        <a href="/auth/strava" class="strava-button">
+          <span>↗</span>
+          Hubungkan dengan Strava
+        </a>
+
+        <p class="secure-note">
+          🔒 Data aktivitas hanya digunakan untuk membuat artwork.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+
+      <div class="section-heading">
+        <span>FAQ</span>
+        <h2>Pertanyaan umum.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details>
+          <summary>
+            Apakah saya perlu upload screenshot Strava?
+            <span>+</span>
+          </summary>
+          <p>
+            Tidak. Dengan integrasi Strava API, aktivitas
+            dapat diambil langsung setelah kamu menghubungkan akun.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Bisa bayar menggunakan QRIS?
+            <span>+</span>
+          </summary>
+          <p>
+            Bisa. Payment gateway seperti Midtrans atau Xendit
+            dapat digunakan untuk menyediakan metode pembayaran QRIS.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Berapa lama proses cetaknya?
+            <span>+</span>
+          </summary>
+          <p>
+            Estimasi produksi dan pengiriman dapat ditampilkan
+            setelah customer menyelesaikan checkout.
+          </p>
+        </details>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      <span class="logo-icon">↗</span>
+      RunPrint
+    </div>
+
+    <p>
+      Turn your miles into memories.
+    </p>
+
+    <span>
+      © 2026 RunPrint
+    </span>
+
+  </footer>
+
+
 </body>
 </html>
+```
+
+```css
+/* style.css */
+
+:root {
+  --black: #111111;
+  --dark: #181818;
+  --cream: #f6f3ed;
+  --white: #ffffff;
+  --orange: #ff5a1f;
+  --orange-dark: #e84910;
+  --gray: #77736d;
+  --light-gray: #e7e2da;
+  --border: #ddd8cf;
+
+  --radius: 20px;
+  --radius-small: 12px;
+
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto;
+
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: var(--black);
+  color: white;
+
+  font-size: 17px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 34px;
+
+  font-size: 14px;
+  color: #5e5a55;
+}
+
+.navbar nav a:hover {
+  color: var(--black);
+}
+
+.nav-button {
+  padding: 11px 18px;
+
+  border: 1px solid var(--black);
+  border-radius: 100px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: .2s ease;
+}
+
+.nav-button:hover {
+  background: var(--black);
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: min(100% - 48px, var(--max-width));
+
+  min-height: 680px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 80px;
+}
+
+.hero-content {
+  padding: 60px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 7px 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 100px;
+
+  background: rgba(255,255,255,.5);
+
+  color: #66615b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 25px;
+}
+
+.badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--orange);
+}
+
+.hero h1 {
+  max-width: 620px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  line-height: .96;
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  display: block;
+
+  color: var(--orange);
+
+  font-style: normal;
+}
+
+.hero p {
+  max-width: 490px;
+
+  color: var(--gray);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 15px 21px;
+
+  border-radius: 100px;
+
+  background: var(--black);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: .2s ease;
+}
+
+.primary-button:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+}
+
+.text-button {
+  font-size: 14px;
+  font-weight: 600;
+
+  border-bottom: 1px solid #999;
+
+  padding-bottom: 3px;
+}
+
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 45px;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars span {
+  width: 30px;
+  height: 30px;
+
+  margin-left: -6px;
+
+  border: 2px solid var(--cream);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--black);
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.avatars span:first-child {
+  margin-left: 0;
+}
+
+.trust strong,
+.trust small {
+  display: block;
+}
+
+.trust strong {
+  font-size: 12px;
+}
+
+.trust small {
+  font-size: 11px;
+  color: var(--gray);
+}
+
+
+/* =========================
+   HERO POSTER
+========================= */
+
+.hero-preview {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.poster {
+  width: min(100%, 470px);
+
+  padding: 25px;
+
+  background: #111;
+
+  box-shadow:
+    25px 30px 60px rgba(0,0,0,.15);
+
+  transform: rotate(2deg);
+
+  color: white;
+}
+
+.poster-top {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 9px;
+  letter-spacing: 1.5px;
+
+  color: #aaa;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #333;
+}
+
+.route-map {
+  height: 390px;
+
+  padding: 25px 5px;
+}
+
+.route-map svg {
+  width: 100%;
+  height: 100%;
+}
+
+.route-shadow {
+  fill: none;
+
+  stroke: rgba(255,90,31,.18);
+  stroke-width: 14;
+
+  stroke-linecap: round;
+}
+
+.route-line {
+  fill: none;
+
+  stroke: var(--orange);
+  stroke-width: 4;
+
+  stroke-linecap: round;
+}
+
+.start-point,
+.finish-point {
+  fill: white;
+}
+
+.start-inner,
+.finish-inner {
+  fill: var(--orange);
+}
+
+.poster-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+
+  padding: 18px 0;
+
+  text-align: center;
+}
+
+.poster-info span,
+.poster-info strong {
+  display: block;
+}
+
+.poster-info span {
+  font-size: 8px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.poster-info strong {
+  margin-top: 5px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 16px;
+}
+
+.poster-footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.poster-footer span {
+  color: #777;
+}
+
+.floating-card {
+  position: absolute;
+
+  right: -15px;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 15px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.1);
+
+  transform: rotate(-2deg);
+}
+
+.check {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #e7f6e8;
+  color: #3b9b47;
+
+  font-size: 12px;
+}
+
+.floating-card strong,
+.floating-card small {
+  display: block;
+}
+
+.floating-card strong {
+  font-size: 11px;
+}
+
+.floating-card small {
+  color: var(--gray);
+  font-size: 10px;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits {
+  width: min(100% - 48px, var(--max-width));
+
+  margin: 30px auto 100px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.benefits > div {
+  padding: 32px 35px;
+  border-right: 1px solid var(--border);
+}
+
+.benefits > div:last-child {
+  border-right: none;
+}
+
+.benefit-number {
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.benefits h3 {
+  margin: 13px 0 8px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 20px;
+}
+
+.benefits p {
+  max-width: 280px;
+
+  color: var(--gray);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+  width: min(100% - 48px, var(--max-width));
+
+  margin: 0 auto;
+
+  padding: 110px 0;
+}
+
+.section-heading {
+  max-width: 650px;
+
+  margin-bottom: 55px;
+}
+
+.section-heading > span,
+.eyebrow {
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin-top: 12px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+
+/* =========================
+   STEPS
+========================= */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.step {
+  padding: 35px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.step-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: var(--black);
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  margin-bottom: 35px;
+}
+
+.step h3 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 22px;
+
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   PRODUCT
+========================= */
+
+.product-section {
+  width: 100%;
+
+  padding: 120px max(24px, calc((100vw - var(--max-width)) / 2));
+
+  background: var(--black);
+
+  color: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 100px;
+}
+
+.product-copy h2 {
+  margin: 15px 0 25px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(50px, 6vw, 75px);
+
+  line-height: .95;
+  letter-spacing: -3px;
+}
+
+.product-copy p {
+  max-width: 440px;
+
+  color: #999;
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+.price {
+  margin-bottom: 30px;
+}
+
+.price span {
+  display: block;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+.price strong {
+  display: block;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 30px;
+}
+
+.product-copy .primary-button {
+  background: var(--orange);
+}
+
+.product-copy .primary-button:hover {
+  background: white;
+  color: var(--black);
+}
+
+.product-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.mini-poster {
+  width: 350px;
+  height: 440px;
+
+  padding: 25px;
+
+  background: #f8f5ed;
+  color: var(--black);
+
+  transform: rotate(-3deg);
+
+  box-shadow: 20px 30px 60px rgba(0,0,0,.4);
+}
+
+.mini-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.mini-poster svg {
+  width: 100%;
+  height: 270px;
+
+  margin-top: 10px;
+}
+
+.mini-route {
+  fill: none;
+
+  stroke: var(--orange);
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+}
+
+.mini-distance {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.mini-distance strong {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 42px;
+}
+
+.mini-distance span {
+  font-size: 10px;
+}
+
+.mini-footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 15px;
+  padding-top: 12px;
+
+  border-top: 1px solid #ccc;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+.order-section {
+  width: min(100% - 48px, var(--max-width));
+
+  margin: 0 auto;
+
+  padding: 120px 0;
+}
+
+.order-card {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  padding: 55px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  text-align: center;
+}
+
+.order-header h2 {
+  margin: 14px 0;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(38px, 5vw, 55px);
+
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.order-header p {
+  max-width: 470px;
+
+  margin: 0 auto 40px;
+
+  color: var(--gray);
+
+  font-size: 14px;
+}
+
+.order-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 35px;
+
+  text-align: left;
+}
+
+.order-step {
+  display: flex;
+  gap: 10px;
+
+  padding: 15px;
+
+  border-top: 2px solid var(--border);
+}
+
+.order-step.active {
+  border-color: var(--orange);
+}
+
+.order-step > span {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--black);
+  color: white;
+
+  font-size: 10px;
+}
+
+.order-step strong,
+.order-step small {
+  display: block;
+}
+
+.order-step strong {
+  font-size: 12px;
+}
+
+.order-step small {
+  margin-top: 3px;
+
+  color: var(--gray);
+
+  font-size: 10px;
+}
+
+.strava-button {
+  width: 100%;
+
+  padding: 17px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 12px;
+
+  background: var(--orange);
+  color: white;
+
+  font-weight: 700;
+
+  transition: .2s ease;
+}
+
+.strava-button:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+.strava-button span {
+  font-size: 18px;
+}
+
+.secure-note {
+  margin-top: 15px;
+
+  color: #999;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-section {
+  padding-top: 50px;
+}
+
+.faq-list {
+  max-width: 800px;
+}
+
+details {
+  border-top: 1px solid var(--border);
+
+  padding: 23px 0;
+}
+
+details:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary span {
+  color: var(--orange);
+
+  font-size: 22px;
+}
+
+details p {
+  max-width: 650px;
+
+  padding-top: 15px;
+
+  color: var(--gray);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  width: min(100% - 48px, var(--max-width));
+
+  margin: 0 auto;
+
+  padding: 35px 0;
+
+  border-top: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--black);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer-logo .logo-icon {
+  width: 25px;
+  height: 25px;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding-top: 50px;
+  }
+
+  .hero-content {
+    padding-bottom: 20px;
+  }
+
+  .hero-preview {
+    padding: 30px 0 80px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits > div {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .benefits > div:last-child {
+    border-bottom: none;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .product-section {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .product-visual {
+    order: -1;
+  }
+
+  .order-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .order-step {
+    border-top: none;
+    border-left: 2px solid var(--border);
+  }
+
+  .order-step.active {
+    border-color: var(--orange);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    width: min(100% - 30px, var(--max-width));
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    width: min(100% - 30px, var(--max-width));
+
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .poster {
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .route-map {
+    height: 300px;
+  }
+
+  .floating-card {
+    right: 0;
+  }
+
+  .benefits,
+  .section,
+  .order-section {
+    width: min(100% - 30px, var(--max-width));
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .product-section {
+    padding: 80px 30px;
+  }
+
+  .mini-poster {
+    width: 290px;
+    height: 390px;
+  }
+
+  .mini-poster svg {
+    height: 235px;
+  }
+
+  .order-card {
+    padding: 30px 20px;
+  }
+
+  footer {
+    width: min(100% - 30px, var(--max-width));
+
+    flex-direction: column;
+    gap: 12px;
+
+    text-align: center;
+  }
+}
+```
